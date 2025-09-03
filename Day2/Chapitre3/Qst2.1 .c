@@ -1,18 +1,21 @@
 #include<stdio.h>
 
-main(){
+int main(){
 
     int n,x,res,N;
-    printf("Entrer un nbr:\n");
+    do{
+         printf("\n Entrer un nbr:\n");
     scanf("%d",&n);
+    if(n>9 && n<100){
+        x=n/10;
+        res=n%10;
+        N=(res*10)+x;
+        printf("Le nbr inverse est:%d\n",N);
+    }
+    else
+     printf("Erreur!\n");
 
-    x=n/10;
-    res=n%10;
-    N=(res*10)+x;
-
-    printf("Le nbr inverse est:%d\n",N);
+    }while (n<=9 || n>=100);
 
     return 0;
-
-
 }
